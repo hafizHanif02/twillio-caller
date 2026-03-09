@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker compose:*)",
+      "Bash(node --version:*)",
+      "Bash(test:*)",
+      "Bash(python -m venv:*)",
+      "Bash(source venv/Scripts/activate)",
+      "Bash(pip install:*)",
+      "Bash(alembic upgrade:*)",
+      "Bash(uvicorn:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(timeout /t 3)",
+      "Bash(venvScriptspython.exe -m uvicorn app.main:app --reload --host 0.0.0.0 --port 7000)",
+      "Bash(ping:*)",
+      "Bash(./venv/Scripts/python.exe -m uvicorn:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(./venv/Scripts/python.exe -c \"import twilio; print\\(twilio.__version__\\); from twilio.jwt.access_token import AccessToken; import inspect; print\\(inspect.signature\\(AccessToken.__init__\\)\\)\")",
+      "Bash(./venv/Scripts/python.exe:*)",
+      "Bash(ngrok config add-authtoken:*)",
+      "Bash(ngrok http:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)"
+    ]
+  }
+}

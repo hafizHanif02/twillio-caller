@@ -1,0 +1,22 @@
+Generic single-database configuration for Alembic.
+
+## Create a new migration
+
+```bash
+cd backend
+alembic revision --autogenerate -m "description of changes"
+```
+
+## Apply migrations
+
+```bash
+cd backend
+alembic upgrade head
+```
+
+## Rollback one migration
+
+```bash
+cd backend
+alembic downgrade -1
+```
