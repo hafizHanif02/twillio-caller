@@ -42,7 +42,6 @@ services:
   - type: web
     name: twilio-caller-frontend
     runtime: static
-    plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
