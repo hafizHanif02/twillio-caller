@@ -26,7 +26,14 @@
       "Bash(ngrok http:*)",
       "Bash(taskkill:*)",
       "Bash(netstat:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(find /Users/hafiz/Documents/GitHub/twillio-caller -type d -not -path */node_modules/* -not -path */__pycache__/* -not -path */.git/*)",
+      "Bash(chmod +x /Users/hafiz/Documents/GitHub/twillio-caller/backend/build.sh)",
+      "Bash(git remote:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)"
     ]
   }
 }
