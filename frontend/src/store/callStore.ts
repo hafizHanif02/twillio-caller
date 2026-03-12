@@ -33,7 +33,7 @@ interface CallState {
   clearNotifications: () => void;
 }
 
-export const useCallStore = create<CallState>((set, get) => ({
+export const useCallStore = create<CallState>((set, _get) => ({
   // Active call
   activeCall: null,
   setActiveCall: (call) => set({ activeCall: call }),

@@ -11,7 +11,7 @@ import { CallHistory } from './components/CallHistory';
 import { IncomingCall } from './components/IncomingCall';
 
 function App() {
-  const { isConnected } = useWebSocket();
+  useWebSocket();
   const { fetchCallHistory } = useCalls();
   const { wsConnected, error, activeCall, incomingCall } = useCallStore();
 
