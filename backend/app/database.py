@@ -3,11 +3,22 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from .config import settings
 
+# Fix for Render: postgres:// -> postgresql://
+database_url = settings.database_url
+if database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
+
+# Configure engine args based on database type
+connect_args = {}
+if database_url.startswith("sqlite"):
+    connect_args["check_same_thread"] = False
+
 # Create database engine
 engine = create_engine(
-    settings.database_url,
-    pool_pre_ping=True,  # Verify connections before using
-    echo=settings.is_development  # Log SQL queries in development
+    database_url,
+    pool_pre_ping=True,
+    echo=settings.is_development,
+    connect_args=connect_args,
 )
 
 # Create session factory
